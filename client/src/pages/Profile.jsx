@@ -12,8 +12,8 @@ export default function Profile() {
   
   const {currentUser} = useSelector((state) => state.user)
   
-console.log(imageError)
-console.log(formData)
+// console.log(imageError)
+// console.log(formData)
   useEffect(()=>{
     if(image){
       handleFileupload(image)
@@ -32,7 +32,7 @@ console.log(formData)
       },
     (error) =>{
       setImageError(true)
-      console.log(error)
+      // console.log(error)
     },
     ()=>{
       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL)=> setFormdata({...formData, profilePicture:downloadURL}));
